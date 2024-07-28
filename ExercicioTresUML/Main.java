@@ -1,9 +1,9 @@
-package ExercicioTresUML;
+
 
 public class Main {
     
     public static void main(String[] args) {
-        Triangulo trianguloUm = new Triangulo();
+        Triangulo trianguloUm = new Triangulo(0.0, 0.0, 0.0, "");
 
         trianguloUm.setLadoUm(2);
         trianguloUm.setLadoDois(2);

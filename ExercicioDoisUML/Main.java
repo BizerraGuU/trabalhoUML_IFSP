@@ -1,11 +1,9 @@
 
-package ExercicioDoisUML;
-
 import java.util.Calendar;
 
 public class Main {
   public static void main(String[] args) {
-    Eleitor eleitorUm = new Eleitor();
+    Eleitor eleitorUm = new Eleitor("", Calendar.getInstance(), 0);
 
     Calendar calendario = Calendar.getInstance();
     

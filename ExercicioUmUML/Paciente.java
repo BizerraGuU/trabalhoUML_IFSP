@@ -1,4 +1,4 @@
-package ExercicioUmUML;
+
 
 public class Paciente {
     
@@ -7,7 +7,13 @@ public class Paciente {
     private double alturaPaciente;
     private double imcPaciente;
 
-    public Paciente(){} // construtor
+    // construtor
+    public Paciente(String nomePaciente, double pesoPaciente, double alturaPaciente, double imcPaciente){
+        this.nomePaciente = nomePaciente;
+        this.pesoPaciente = pesoPaciente;
+        this.alturaPaciente = alturaPaciente;
+        this.imcPaciente = imcPaciente;
+    } 
 
     public String getNomePaciente() {
         return nomePaciente;

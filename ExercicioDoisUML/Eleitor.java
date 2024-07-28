@@ -1,4 +1,4 @@
-package ExercicioDoisUML;
+
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -16,7 +16,12 @@ public class Eleitor{
     private Calendar dataNascimento; // atributo do tipo Calendar
     private int idadeEleitor;
 
-    public Eleitor(){} // construtor
+    // construtor
+    public Eleitor(String nomeEleitor, Calendar dataNascimento, int idadeEleitor){
+        this.nomeEleitor = nomeEleitor;
+        this.dataNascimento = dataNascimento;
+        this.idadeEleitor = idadeEleitor;
+    } 
  
     public String getNomeEleitor() {
         return nomeEleitor;

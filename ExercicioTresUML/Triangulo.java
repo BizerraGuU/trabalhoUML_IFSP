@@ -1,5 +1,3 @@
-package ExercicioTresUML;
-
 
 public class Triangulo {
     
@@ -8,7 +6,12 @@ public class Triangulo {
     private double ladoTres;
     private String tipoTriangulo;
 
-    public Triangulo(){}
+    public Triangulo(double ladoUm, double ladoDois, double ladoTres, String tipoTriangulo){
+        this.ladoUm = ladoUm;
+        this.ladoDois = ladoDois;
+        this.ladoTres = ladoTres;
+        this.tipoTriangulo = tipoTriangulo;
+    }
 
     public double getLadoUm() {
         return ladoUm;
