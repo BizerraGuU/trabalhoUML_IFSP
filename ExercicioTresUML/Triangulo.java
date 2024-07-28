@@ -44,12 +44,20 @@ public class Triangulo {
 
     public void encontraTipoTriangulo() {
         if (ladoUm <= 0 || ladoDois <= 0 || ladoTres <= 0) {
+            // verifica se alguns dos lados é menor que zero e dispara o erro
             throw new IllegalArgumentException("Os lados não podem ser negativos ou zero.");
         }
 
         if (ladoUm + ladoDois <= ladoTres || ladoUm + ladoTres <= ladoDois || ladoDois + ladoTres <= ladoUm) {
+            // verifica se o tamanho dos lados gera um triangulo
             throw new IllegalArgumentException("Os lados não formam um triângulo.");
         }
+
+        // essas concidiconais verificam o tipo do triangulo
+        // a partir dos criteiros:
+        // se dois lados são iguais == isoceles
+        // se todos são iguais == equilatero
+        // todos diferentes == escaleno
 
         if (ladoUm == ladoDois && ladoDois == ladoTres) {
             setTipoTriangulo("equilatero");
@@ -65,13 +73,19 @@ public class Triangulo {
             double p = (ladoUm + ladoDois + ladoTres)/2;
 
             // p = semiperimetro do triangulo
-
+            // calcula a raiz com o metodo sqrt da classe Math
             double area = Math.sqrt((p*(p-ladoUm)*(p-ladoDois)*(p-ladoTres)));
 
             //formula de heron A=√(p(p−a)(p−b)(p−c))
 
             System.out.println("A área do triagulo é de: " + area);
             
+            // verifica os angulos dos triangulos a partir das condicionais:
+            // se A² < B² + C² == acutangulo
+            // se A² > B² + C² == obtusangulo
+            // se A² = B² + C² == retangulo
+            // utilizando o metodo pow, da classe Math para elevar a dois
+
             if ((Math.pow(ladoUm, 2)) < (Math.pow(ladoDois, 2) + Math.pow(ladoTres, 2))){
             System.out.println("O angulo é acutangulo");
             } 
@@ -150,6 +164,9 @@ public class Triangulo {
                 }
             }
         }
+
+        // nas condicionais, ele verifica o tipo do triangulo com o metodo equals
+        // mas poderia ser o equalsIgonoreCase 
 
         if (tipoTriangulo.equals("equilatero")){
             double raizDeTres = Math.sqrt(3);
