@@ -1,4 +1,4 @@
-
+package ExercicioDoisUML;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -80,10 +80,13 @@ public class Eleitor{
          * e então "seta" a idade
          */
 
-        if (diaDeHoje.get(Calendar.MONTH) < dataNascimento.get(Calendar.MONTH) ||
-            (diaDeHoje.get(Calendar.MONTH) == dataNascimento.get(Calendar.MONTH) && 
-            diaDeHoje.get(Calendar.DAY_OF_MONTH) < dataNascimento.get(Calendar.DAY_OF_MONTH))) {
+        if (diaDeHoje.get(Calendar.MONTH) < dataNascimento.get(Calendar.MONTH)) {
             idade--;
+        
+        if (diaDeHoje.get(Calendar.MONTH) == dataNascimento.get(Calendar.MONTH) && 
+        diaDeHoje.get(Calendar.DAY_OF_MONTH) < dataNascimento.get(Calendar.DAY_OF_MONTH)){
+            idade--;
+        }
 
             /* nessa condiconal, ele verifica se o mês e o dia correspondem à data digitada 
              * pelo usuário, caso não corresponda, no caso, ela seja menor. ex:

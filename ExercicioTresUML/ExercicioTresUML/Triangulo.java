@@ -1,4 +1,4 @@
-
+package ExercicioTresUML;
 public class Triangulo {
     
     private double ladoUm;
@@ -48,12 +48,7 @@ public class Triangulo {
     public void encontraTipoTriangulo() {
         if (ladoUm <= 0 || ladoDois <= 0 || ladoTres <= 0) {
             // verifica se alguns dos lados é menor que zero e dispara o erro
-            throw new IllegalArgumentException("Os lados não podem ser negativos ou zero.");
-        }
-
-        if (ladoUm + ladoDois <= ladoTres || ladoUm + ladoTres <= ladoDois || ladoDois + ladoTres <= ladoUm) {
-            // verifica se o tamanho dos lados gera um triangulo
-            throw new IllegalArgumentException("Os lados não formam um triângulo.");
+            System.out.println("Não é um triangulo");
         }
 
         // essas concidiconais verificam o tipo do triangulo
